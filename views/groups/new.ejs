@@ -1,0 +1,21 @@
+<form action="/groups" method="post">
+
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <br>
+    <div>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="description"></textarea>
+    </div>
+    <br>
+    <div>
+        <select name="category" id="">
+            <% for(cat of categories){%> 
+            <option value="<%= cat %> "><%= cat %> </option>
+            <% } %> 
+        </select>
+    </div>
+    <br>
+    <button type="submit">Create Group</button>
+</form>

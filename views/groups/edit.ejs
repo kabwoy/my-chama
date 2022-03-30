@@ -1,0 +1,21 @@
+<form action="/groups/<%=  foundGroup._id %>?_method=PUT" method="post">
+    <h1>Edit Group</h1>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="<%= foundGroup.name %>">
+    </div>
+    <br>
+    <div>
+        <textarea name="description" id="description" cols="30" rows="10" placeholder="description"><%= foundGroup.description %></textarea>
+    </div>
+    <br>
+    <div>
+        <select name="category" id="">
+            <% for(cat of categories){%> 
+            <option value="<%= cat %>"<%= foundGroup.category === cat ? 'selected':" " %> ><%= cat%> </option>
+            <% } %> 
+        </select>
+    </div>
+    <br>
+    <button type="submit">Edit Group</button>
+</form>

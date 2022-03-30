@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Tenali+Ramakrishna&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://kencreamsacco.co.ke/wp-content/uploads/2018/02/Kenya-newnotes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+    text-align: center;
+    object-fit: contain;
+    
+}
+.main h1{
+    line-height: 1.4;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+.main .btn{
+    text-decoration: none;
+    border: 2px solid green;
+    margin: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+.main .btn:hover{
+
+    background-color: rgb(1, 138, 1);
+    color: white;
+    transition: 0.5s;
+
+}
