@@ -1,3 +1,6 @@
+<%- include("../partials/header.ejs") %> 
+<%- include("../partials/nav.ejs") %> 
+
 <ul>
     <% for(group of groups){%> 
     <li><%= group.name%> <a href="/groups/<%= group._id %> ">show</a> </li>
@@ -5,3 +8,5 @@
 </ul>
 
 <a href="/groups/new">Create A New Group</a>
+
+<%- include("../partials/footer.ejs") %> 

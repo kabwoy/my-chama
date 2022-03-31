@@ -60,7 +60,9 @@ app.get("/groups/:id/edit" , async(req,res)=>{
 app.put("/groups/:id" , async (req,res)=>{
     const {id} = req.params
 
-    const update = await Group.findByIdAndUpdate(id)
+    const update = await Group.findByIdAndUpdate(id, req.body)
+
+    console.log(update)
 
     res.redirect(`/groups/${update._id}`)
 })
