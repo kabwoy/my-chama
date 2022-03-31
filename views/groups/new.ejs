@@ -1,24 +1,37 @@
-<%- include("../partials/header.ejs") %> 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/new.css">
+    <title>My Chama</title>
+</head>
+<body>
+<%- include("../partials/nav.ejs") %> 
+<br>
+<main class="form-container">
 <form action="/groups" method="post">
-
+    <h1 style="text-align: center; line-height: 1.5; margin-bottom: 5px;">Add A Group</h1>
     <div>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" class="name" placeholder="Name">
     </div>
     <br>
     <div>
         <textarea name="description" id="description" cols="30" rows="10" placeholder="description"></textarea>
     </div>
     <br>
-    <div>
-        <select name="category" id="">
+    <div class="select-box">
+        
+        <select name="category" id="cat">
             <% for(cat of categories){%> 
             <option value="<%= cat %> "><%= cat %> </option>
             <% } %> 
         </select>
     </div>
     <br>
-    <button type="submit">Create Group</button>
+    <button type="submit" class="btn">Create Group</button>
 </form>
-<%- include("../partials/footer.ejs") %> 
+</main>
+</body>
+</html>
